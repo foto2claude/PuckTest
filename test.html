@@ -2,22 +2,12 @@
  <head>
  </head>
  <body>
-<table style="width:100%">
-  <tr>
-    <th><button onclick="Puck.write('LED1.set();\n');">On </button></th>
-    <th><button onclick="Puck.write('LED1.reset();\n');">Off</button></th> 
-    <th>Age</th>
-  </tr>
-  <tr>
-    <td><button onclick="Puck.write('LED2.set();\n');">On</button></td>
-    <td><button onclick="Puck.write('LED2.reset();\n');">Off</button></td> 
-    <td>50</td>
-  </tr>
-  <tr>
-    <td><button onclick="Puck.write('LED3.set();\n');">On</button></td>
-    <td><button onclick="Puck.write('LED3.reset();\n');">Off</button></td> 
-    <td>94</td>
-  </tr>
-</table>
-</body>
+  <script src="https://www.puck-js.com/puck.js"></script>
+  <button onclick="Puck.write('LED1.set();\n');">On </button>
+  <button onclick="Puck.write('LED1.reset();\n');">Off</button>
+  <button onclick="Puck.write('LED2.set();\n');">On</button>
+  <button onclick="Puck.write('LED2.reset();\n');">Off</button>
+  <button onclick="Puck.write('LED3.set();\n');">On</button>
+  <button onclick="Puck.write('LED3.reset();\n');">Off</button>
+ </body>
 </html>
