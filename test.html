@@ -26,7 +26,11 @@
       document.getElementById('ifttt').src = URL+"?"+iftttRequests;
       iftttRequests++;
     }
-
+    function ifttt2() {
+      document.getElementById('ifttt2').src = URL2+"?"+ifttt2Requests;
+      ifttt2Requests++;
+    } 
+   
     // Called when we get a line of data
     function onLine(v) {
       log("Received: "+JSON.stringify(v));
