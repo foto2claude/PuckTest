@@ -77,11 +77,7 @@
               function() { log("Ready!"); });
           }, 1500);
         });
-if (connection) {
-        log("Closing connection");
-        connection.close();
-        connection = undefined;
-      }
+//connection.write("\x10reset();\n", function() );
       });
     });
   </script>
