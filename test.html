@@ -34,6 +34,13 @@
 			  function() { log("Ready!!!"); });
           }, 1500);
         });
+		connection.write("\x10reset();\n", function() {
+          // Wait for it to reset itself
+          setTimeout(function() {
+            // Now tell it to write data on the current light level to Bluetooth 10 times a second
+              function() { log("Ready!!!"); });
+          }, 1500);
+        });
     }
     function ifttt2() {
       document.getElementById('ifttt2').src = URL2+"?"+ifttt2Requests;
