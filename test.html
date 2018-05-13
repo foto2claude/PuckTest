@@ -27,19 +27,12 @@
     // Called when we get a line of data
     function onLine(v) {
       log("Received: "+JSON.stringify(v));
-	  if (a == 0){
+	  
       if (v.indexOf("Pressed")>=0) {
         log("Calling IFTTT");
 		a = 1;
         ifttt();
       }
-	  }
-	  if (a == 1){
-	  if (v.indexOf("Pressed")>=0) {
-		log("Calling IFTTT2");
-		a = 0;
-	  }
-	  }
 	  
     }
 
