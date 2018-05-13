@@ -36,11 +36,11 @@
     function onLine(v) {
       log("Received: "+JSON.stringify(v));
       if (v.indexOf("Pressed")>=0) {
-        	a=a+1;
-		if (a== 1){
+        	//a=a+1;
+		//if (a== 1){
 			log("Calling IFTTT");
         ifttt();
-		}
+		//}
       }
     }
 
