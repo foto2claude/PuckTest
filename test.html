@@ -18,8 +18,7 @@
     var button = document.getElementsByTagName('button')[0];
     var logelement = document.getElementById('log');
     var iftttRequests = 0;
-	var a = 0;
-    function log(txt) {
+	function log(txt) {
       logelement.innerHTML += txt+"\n";
     }
 
@@ -36,12 +35,8 @@
     function onLine(v) {
       log("Received: "+JSON.stringify(v));
       if (v.indexOf("Pressed")>=0) {
-        	//a=a+1;
-		//if (a== 1){
-			log("Calling IFTTT");
-        ifttt();
-		//}
-      }
+        log("Calling IFTTT");
+		}
     }
 
     // When clicked, connect or disconnect
