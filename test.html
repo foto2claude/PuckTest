@@ -6,19 +6,15 @@
   <pre id="log"></pre>
   <button>Click here to start</button><br/>
   <iframe id="ifttt" style="width:640px;height:32px"></iframe>
-  <iframe id2="ifttt2" style="width:640px;height:42px"></iframe>
   <script src="https://www.puck-js.com/puck.js"></script>
   <script type="text/javascript">
     // ------------------------------------- REPLACE ME
-    var URL = "https://maker.ifttt.com/trigger/puck_pressed/with/key/eM8Z8ucSd9jJWsgLGqhtJ32cOQm7-sjei_BYWHRVbKy";
-    // ------------------------------------- REPLACE ME
-   // ------------------------------------- REPLACE ME
-    var URL2 = "https://maker.ifttt.com/trigger/puck_pressed/with/key/eM8Z8ucSd9jJWsgLGqhtJ32cOQm7-sjei_BYWHRVbKy";
+    var URL = "https://maker.ifttt.com/trigger/puck_pressed/with/key/jghfJHGFhjkgHJKGjhgJHgkHfRDhgfKJtfrjgh";
     // ------------------------------------- REPLACE ME
     var button = document.getElementsByTagName('button')[0];
     var logelement = document.getElementById('log');
     var iftttRequests = 0;
-	function log(txt) {
+    function log(txt) {
       logelement.innerHTML += txt+"\n";
     }
 
@@ -26,17 +22,14 @@
       document.getElementById('ifttt').src = URL+"?"+iftttRequests;
       iftttRequests++;
     }
-    function ifttt2() {
-      document.getElementById('ifttt2').src = URL2+"?"+ifttt2Requests;
-      ifttt2Requests++;
-    } 
-   
+
     // Called when we get a line of data
     function onLine(v) {
       log("Received: "+JSON.stringify(v));
       if (v.indexOf("Pressed")>=0) {
         log("Calling IFTTT");
-		}
+        ifttt();
+      }
     }
 
     // When clicked, connect or disconnect
