@@ -20,6 +20,7 @@
     }
 
     function ifttt() {
+		log("Calling IFTTT");
       document.getElementById('ifttt').src = URL+"?"+iftttRequests;
       iftttRequests++;
 	  a = 1;
@@ -29,13 +30,13 @@
     function onLine(v) {
       log("Received: "+JSON.stringify(v));
       if (v.indexOf("Pressed")>=0) {
-		if (a == 1){
-        log("Calling IFTTT");
+		//if (a == 1){
+       // log("Calling IFTTT");
         ifttt();
-		}
-		if (a == 0) {
-		log("Calling IFTTT2");
-		}
+		//}
+		//if (a == 0) {
+		//log("Calling IFTTT2");
+		//}
       }
     }
 
