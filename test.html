@@ -14,7 +14,7 @@
     var button = document.getElementsByTagName('button')[0];
     var logelement = document.getElementById('log');
     var iftttRequests = 0;
-	var a = 0;
+	var a = 1;
     function log(txt) {
       logelement.innerHTML += txt+"\n";
     }
@@ -22,7 +22,7 @@
     function ifttt() {
       document.getElementById('ifttt').src = URL+"?"+iftttRequests;
       iftttRequests++;
-	  a = 1;
+	  a = 0;
     }
 
     // Called when we get a line of data
