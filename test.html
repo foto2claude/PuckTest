@@ -20,10 +20,16 @@
     }
 
     function ifttt() {
+	    if (a == 0){
 		log("Calling IFTTT");
       document.getElementById('ifttt').src = URL+"?"+iftttRequests;
       iftttRequests++;
 	  a = 1;
+	  }
+	  else{
+	  log("Calling IFTTT121");
+	  a = 0;
+	  }
     }
 
     // Called when we get a line of data
