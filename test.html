@@ -27,7 +27,7 @@
     function onLine(v) {
       log("Received: "+JSON.stringify(v));
       if (v.indexOf("Pressed")>=0) {
-        log("Calling IFTTT");
+        log("Calling Claude");
         ifttt();
       }
     }
@@ -46,7 +46,7 @@
           log("Couldn't connect!");
           return;
         }
-        log("Connecting...");
+        log("Connecting...!");
         connection = c;
         // Handle the data we get back, and call 'onLine'
         // whenever we get a line
