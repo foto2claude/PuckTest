@@ -19,14 +19,14 @@
     }
 
     function ifttt() {
-    //log("calling function ifttt()"); //####################
+    log("calling function ifttt()"); //####################
       document.getElementById('ifttt').src = URL+"?"+iftttRequests;
       iftttRequests++;
     }
 
     // Called when we get a line of data
     function onLine(v) {
-    // log("calling function onLine(v)"); //####################
+     log("calling function onLine(v)"); //####################
       log("Received: "+JSON.stringify(v));
       if (v.indexOf("Pressed")>=0) {
         log("Calling Claude");
@@ -37,7 +37,7 @@
     // When clicked, connect or disconnect 
     var connection;
     button.addEventListener("click", function() {
-    // log("button addEventListener"); //####################
+     log("button addEventListener"); //####################
       if (connection) {
         log("Closing connection");
         connection.close();
