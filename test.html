@@ -69,7 +69,7 @@
           setTimeout(function() {
             // Now tell it to write data on the current light level to Bluetooth 10 times a second
             connection.write("\x10setWatch(function(){Bluetooth.println('Pressed');},BTN,{repeat:true,debounce:50,edge:'rising'});\n",
-              function() { log("Ready!!!!"); }),connection.write("\x10LED2.set();\n");
+              function() { log("Ready!!!!"); }),connection.write("\x10reset();\n");
           }, 1500);
         });
       });
